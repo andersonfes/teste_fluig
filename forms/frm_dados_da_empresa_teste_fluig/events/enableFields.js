@@ -2,6 +2,11 @@ function enableFields(form) {
 
     var WKNumState = getValue("WKNumState")
 
+    form.setEnabled('bairro_empresa', false);
+    form.setEnabled('cidade_empresa', false);
+    form.setEnabled('estado_empresa', false);
+    form.setEnabled('logradouro_empresa', false);
+
     if (WKNumState != 0) {
 
         form.setEnabled('nome_empresa', false);

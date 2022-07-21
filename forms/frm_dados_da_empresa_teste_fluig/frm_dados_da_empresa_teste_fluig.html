@@ -1,0 +1,202 @@
+<html>
+
+<head>
+    <link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css" />
+    <script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+    <script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+    <script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/webdesk/vcXMLRPC.js"></script>
+</head>
+
+<body>
+    <div class="fluig-style-guide">
+        <form name="form" role="form">
+
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h1 class="panel-title" style="text-align: center;">Dados do cadastro</h1>
+                </div>
+            </div>
+
+            <!--             
+			<div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fluigicon fluigicon-user icon-lg"></i> Solicitante
+                    </h3>
+                </div>
+
+                <div class="panel-body">
+                    <div class="row">
+
+                        <div class="col-md-6 form-group">
+                            <label for="nome_solicitante">Nome do Solicitante</label>
+                            <input type="text" name="nome_solicitante" id="nome_solicitante" class="form-control">
+                        </div>
+
+                        <div class="col-md-2 form-group">
+                            <label for="dataNascimento_solicitante">Data da Solicitação</label>
+                            <input type="text" name="dataNascimento_solicitante" id="dataNascimento_solicitante" class="form-control" maxlength="10">
+                        </div>
+
+                    </div>
+                </div>
+            </div> 
+				-->
+
+            <div class="panel panel-info" name="painel_empresa" id="painel_empresa">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="flaticon flaticon-pin-map icon-lg"></i>Dados da Empresa</h3>
+                </div>
+
+
+                <div class="panel-body">
+
+                    <div class="row">
+
+                        <div class="col-md-4 form-group">
+                            <label for="nome_empresa">Nome da Empresa <samp style="color: red;">*</samp></label>
+                            <input type="text" name="nome_empresa" id="nome_empresa" class="form-control" placeholder="Digite o nome da empresa">
+                        </div>
+
+                        <div class="col-md-3 form-group">
+                            <label for="email_empresa">E-mail <samp style="color: red;">*</samp></label>
+                            <input type="email" name="email_empresa" id="email_empresa" class="form-control" placeholder="Digite um e-mial">
+                            <div id="msgemail"></div>
+                        </div>
+
+                        <div class="col-md-2 form-group">
+                            <label for="Tele_empresa">Telefone <samp style="color: red;">*</samp></label>
+                            <input type="text" name="Tele_empresa" id="Tele_empresa" class="form-control" maxlength="14" placeholder="Digite um telefone">
+                        </div>
+
+                        <div class="col-md-3 form-group">
+                            <label for="contato_empresa">Contato <samp style="color: red;">*</samp></label>
+                            <input type="text" name="contato_empresa" id="contato_empresa" class="form-control" placeholder="Digite o nome do contato">
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-2 form-group">
+                            <label for="cep_empresa">Cep <samp style="color: red;">*</samp></label>
+                            <input type="text" name="cep_empresa" id="cep_empresa" class="form-control" maxlength="9" placeholder="Digite um cep">
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-1 form-group">
+                            <label for="numero_empresa">Numero <samp style="color: red;">*</samp></label>
+                            <input type="text" name="numero_empresa" id="numero_empresa" class="form-control">
+                        </div>
+
+                        <div class="col-md-3 form-group">
+                            <label for="Bairro_empresa">Bairro<!--  <samp style="color: red;">*</samp> --></label>
+                            <input type="text" name="bairro_empresa" id="bairro_empresa" class="form-control">
+                        </div>
+
+                        <div class="col-md-3 form-group">
+                            <label for="cidade_empresa">Cidade<!--  <samp style="color: red;">*</samp> --></label>
+                            <input type="text" name="cidade_empresa" id="cidade_empresa" class="form-control">
+                        </div>
+
+                        <div class="col-md-1 form-group">
+                            <label for="estado_empresa">Estado<!--  <samp style="color: red;">*</samp> --></label>
+                            <input type="text" name="estado_empresa" id="estado_empresa" class="form-control">
+                        </div>
+
+                        <div class="col-md-4 form-group">
+                            <label for="logradouro_empresa">Logradouro<!--  <samp style="color: red;">* </samp>--></label>
+                            <input type="text" name="logradouro_empresa" id="logradouro_empresa" class="form-control">
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-12 form-group">
+                            <label for="infoAdicional_empresa">Informações Adicional  <!-- <samp style="color: red;">*</samp> --></label>
+                            <textarea name="infoAdicional_empresa" id="infoAdicional_empresa" rows="2" class="form-control"></textarea>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="panel panel-info" name="painel_leads" id="painel_leads">
+
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fluigicon fluigicon-user-selection icon-lg"></i> Agendar reuninão</h3>
+                </div>
+
+                <div class="panel-body">
+
+                    <div class="row">
+
+                        <div class="col-md-12 form-group">
+
+                            <div class="custom-radio custom-radio-info">
+                                <input type="radio" name="aprovacao_leads" value="aprovado" id="aprova_leads_aprovar">
+                                <label for="aprova_leads_aprovar">Aprovado</label>
+                            </div>
+
+                            <div class="custom-radio custom-radio-danger">
+                                <input type="radio" name="aprovacao_leads" value="reprovado" id="aprova_leads_reprovado">
+                                <label for="aprova_leads_reprovado">Reprovado</label>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="panel panel-info" name="painel_comercial" id="painel_comercial">
+
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fluigicon fluigicon-user-selection icon-lg"></i> Comercial</h3>
+                </div>
+
+                <div class="panel-body">
+
+                    <div class="row">
+
+                        <div class="col-md-12 form-group">
+
+                            <div>
+                                <label for="">Comfirmação de recebimento </label>
+                            </div>
+
+                            <div class="custom-radio custom-radio-info">
+                                <input type="radio" name="confirmacao" value="sim" id="sim_recebimento">
+                                <label for="sim_recebimento">Sim</label>
+                            </div>
+
+                            <div class="custom-radio custom-radio-danger">
+                                <input type="radio" name="confirmacao" value="nao" id="nao_recebimento">
+                                <label for="nao_recebimento">Não</label>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </form>
+    </div>
+</body>
+
+<script src="validaCampo.js"></script>
+<script src="mascaras.js"></script>
+
+</html>

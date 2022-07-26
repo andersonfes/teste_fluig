@@ -8,7 +8,7 @@ Baixa o projeto e sobe no ambiente Fluig e cria uma nova solicitação preencha 
 
 ## Itens pendentes no projeto:
 
-•	Fazer mais um script que chama o dataset consulta_cep_teste e retorna os valores preenchendo os campos: Bairro, Cidade, Estado, Logradouro.
+•	Criar mais um arquivo javaScript e dentro dele criar uma função que chama o dataset consulta_cep_teste e retorna os valores preenchendo os campos: Bairro, Cidade, Estado, Logradouro.
 
 ## Melhorias a serem feitas:
 
